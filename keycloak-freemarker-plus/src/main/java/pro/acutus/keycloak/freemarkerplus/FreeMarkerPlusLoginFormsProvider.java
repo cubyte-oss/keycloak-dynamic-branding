@@ -7,19 +7,19 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ws.rs.core.UriBuilder;
-import org.jboss.resteasy.spi.ResteasyUriInfo;
+
+import org.jboss.resteasy.specimpl.ResteasyUriInfo;
 import org.keycloak.forms.login.freemarker.FreeMarkerLoginFormsProvider;
 import org.keycloak.forms.login.LoginFormsPages;
 import org.keycloak.models.KeycloakSession;
-import org.keycloak.theme.FreeMarkerUtil;
 import org.keycloak.theme.Theme;
 
 public class FreeMarkerPlusLoginFormsProvider extends FreeMarkerLoginFormsProvider {
 
     private static final Logger LOG = Logger.getLogger(FreeMarkerPlusLoginFormsProvider.class.getName());
 
-    public FreeMarkerPlusLoginFormsProvider(KeycloakSession session, FreeMarkerUtil freeMarker) {
-        super(session, freeMarker);
+    public FreeMarkerPlusLoginFormsProvider(KeycloakSession session) {
+        super(session);
     }
 
     @Override
